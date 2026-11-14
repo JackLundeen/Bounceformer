@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://njxch4yb30ei"
-path="res://.godot/imported/IMG_3585.jpg-d44b025c2dc0a0346c55fcece59a4e05.ctex"
+uid="uid://beafp17k6kh3j"
+path="res://.godot/imported/PlaceHolderTile.png-400677541dd97fc77c0a4f7c9c42c6ce.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://IMG_3585.jpg"
-dest_files=["res://.godot/imported/IMG_3585.jpg-d44b025c2dc0a0346c55fcece59a4e05.ctex"]
+source_file="res://Images/PlaceHolderTile.png"
+dest_files=["res://.godot/imported/PlaceHolderTile.png-400677541dd97fc77c0a4f7c9c42c6ce.ctex"]
 
 [params]
 
