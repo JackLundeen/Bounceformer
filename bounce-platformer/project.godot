@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="BouncePlatformer"
-run/main_scene="uid://dfsmfil783s1v"
+run/main_scene="uid://dte8m8u8abg25"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
