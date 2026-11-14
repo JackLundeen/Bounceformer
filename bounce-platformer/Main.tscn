@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dfsmfil783s1v"]
+
+[ext_resource type="Texture2D" uid="uid://njxch4yb30ei" path="res://IMG_3585.jpg" id="1_glv2v"]
+
+[node name="Node2D" type="Node2D" unique_id=1876379186]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1341713938]
+position = Vector2(227.75, 244.855)
+scale = Vector2(0.3664812, 0.36648124)
+texture = ExtResource("1_glv2v")
