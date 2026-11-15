@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://bwxuefefhdn6s"]
+[gd_scene format=4 uid="uid://dfsmfil783s1v"]
 
 [ext_resource type="Script" uid="uid://08tbuywv8knb" path="res://Scripts/Player.gd" id="1_joc8x"]
 [ext_resource type="Texture2D" uid="uid://ba885i7gpdvgm" path="res://Images/Knight player images/knight_idle.png" id="2_joc8x"]
@@ -93,6 +93,16 @@ sources/5 = SubResource("TileSetAtlasSource_q1ws5")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yf5fn"]
 size = Vector2(30, 53)
 
+[sub_resource type="LabelSettings" id="LabelSettings_25m2x"]
+font_size = 28
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_mni53"]
+font_size = 44
+outline_size = 12
+outline_color = Color(0, 0, 0, 1)
+
 [node name="Level1" type="Node2D" unique_id=1693253945]
 
 [node name="Background" type="Sprite2D" parent="." unique_id=981056759]
@@ -154,3 +164,21 @@ shape = SubResource("RectangleShape2D_yf5fn")
 
 [node name="Sprite2D" type="Sprite2D" parent="Skeletons/Skeleton" unique_id=1226736008]
 texture = ExtResource("14_ubfni")
+
+[node name="Label2" type="Label" parent="." unique_id=968578027]
+offset_left = 165.0
+offset_top = 160.0
+offset_right = 1154.0
+offset_bottom = 328.0
+text = "                    Jump - W       Move left/right - a/d
+   Shoot - Space   Look left/right - left & right arrows
+look up - up arrow (changes based on prev direction)"
+label_settings = SubResource("LabelSettings_25m2x")
+
+[node name="Label" type="Label" parent="." unique_id=2101949201]
+offset_left = 418.0
+offset_top = 78.0
+offset_right = 663.0
+offset_bottom = 161.0
+text = "Controls"
+label_settings = SubResource("LabelSettings_mni53")
