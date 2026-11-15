@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bi0skdcmkxg6a"
-path="res://.godot/imported/play_button.png-45632184cb7e81b83560a29c0273a9a2.ctex"
+uid="uid://svj5an7yjeb1"
+path="res://.godot/imported/Full Heart.png-d4b2f5c67d5cd2a467b5d887b156dfd5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/Misc/Play Button/play_button.png"
-dest_files=["res://.godot/imported/play_button.png-45632184cb7e81b83560a29c0273a9a2.ctex"]
+source_file="res://Images/GUI/Heart Containers/Full Heart.png"
+dest_files=["res://.godot/imported/Full Heart.png-d4b2f5c67d5cd2a467b5d887b156dfd5.ctex"]
 
 [params]
 
