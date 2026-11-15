@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://ba885i7gpdvgm" path="res://Images/Knight player images/knight_idle.png" id="2_joc8x"]
 [ext_resource type="Script" uid="uid://u78mrscjyi7h" path="res://Scenes/player_image.gd" id="3_jghel"]
 [ext_resource type="Texture2D" uid="uid://beafp17k6kh3j" path="res://Images/PlaceHolderTile.png" id="3_slnnj"]
-[ext_resource type="Texture2D" uid="uid://b7gv5pw4tceou" path="res://Images/Knight player images/knight_right.png" id="4_slnnj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yf5fn"]
 size = Vector2(31.25, 51.75)
@@ -39,10 +38,6 @@ script = ExtResource("3_jghel")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=942624492]
 position = Vector2(-45, 65)
 shape = SubResource("RectangleShape2D_yf5fn")
-
-[node name="KnightRight" type="Sprite2D" parent="Player" unique_id=54616641]
-position = Vector2(-46, 66)
-texture = ExtResource("4_slnnj")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1077763146]
 position = Vector2(706, 443)
