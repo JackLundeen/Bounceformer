@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://db0320vs7cett"
-path="res://.godot/imported/pixil-frame-0 (6).png-f2730107203de7ba18c770219ed7e84c.ctex"
+path="res://.godot/imported/Gameover.png-b34ae196b7ce398bcb8b6057ed0552c5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/GUI/pixil-frame-0 (6).png"
-dest_files=["res://.godot/imported/pixil-frame-0 (6).png-f2730107203de7ba18c770219ed7e84c.ctex"]
+source_file="res://Images/GUI/Gameover.png"
+dest_files=["res://.godot/imported/Gameover.png-b34ae196b7ce398bcb8b6057ed0552c5.ctex"]
 
 [params]
 
