@@ -32,3 +32,5 @@ func _physics_process(delta):
 		directionx = -directionx
 		directiony = -directiony
 		
+func clearBullets():
+	queue_free()

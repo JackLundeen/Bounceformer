@@ -6,6 +6,7 @@ const JUMP_VELOCITY = -300.0
 var Level = 1
 
 @onready var bullet = preload('res://Scenes/bullet.tscn')
+@onready var lives = $'../Lives'
 @onready var bullets = $'../Bullets' 
 @onready var player = $'../Player/Sprite2D'
 
@@ -48,7 +49,8 @@ func _physics_process(delta: float) -> void:
 		else:
 			get_tree().change_scene_to_file('res://Scenes/YouWin.tscn')
 		
-	
+	if global_position.y > 1024:
+		lives.lostLife()
 	
 	# Add the gravity.
 	if not is_on_floor():
@@ -65,5 +67,9 @@ func _physics_process(delta: float) -> void:
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-
+	
 	move_and_slide()
+
+func respawn():
+	global_position.x = 20
+	global_position.y = 820
