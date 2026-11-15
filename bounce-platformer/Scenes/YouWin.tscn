@@ -1,3 +1,33 @@
 [gd_scene format=3 uid="uid://bjn84my0gyurs"]
 
-[node name="Youwin" type="Node2D" unique_id=673554972]
+[ext_resource type="Texture2D" uid="uid://bhw4oybppccdx" path="res://Images/Backgrounds/Background5.png" id="1_wpycq"]
+[ext_resource type="Texture2D" uid="uid://hw7sgqgmny2i" path="res://Images/GUI/GameWon.png" id="2_3pahf"]
+[ext_resource type="Texture2D" uid="uid://d1dyssfryal6o" path="res://Images/GUI/Play Again Button/play_again_button.png" id="3_75fnr"]
+[ext_resource type="Texture2D" uid="uid://b6ldtsi51jv31" path="res://Images/GUI/Play Again Button/play_again_button_pressed.png" id="4_mk7mp"]
+[ext_resource type="Script" uid="uid://bc2us2t1qd4ki" path="res://Scripts/PlayAgain.gd" id="5_krre8"]
+
+[node name="Youwin" type="Control" unique_id=1604056483]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Background5" type="Sprite2D" parent="." unique_id=281417271]
+position = Vector2(513, 512)
+scale = Vector2(4.029412, 4.0078125)
+texture = ExtResource("1_wpycq")
+
+[node name="GameWon" type="Sprite2D" parent="." unique_id=1378337520]
+position = Vector2(579, 66.00012)
+scale = Vector2(4.8137255, 4.813726)
+texture = ExtResource("2_3pahf")
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=279601938]
+layout_mode = 0
+offset_left = 244.0
+offset_top = 692.0
+offset_right = 788.0
+offset_bottom = 836.0
+texture_normal = ExtResource("3_75fnr")
+texture_pressed = ExtResource("4_mk7mp")
+script = ExtResource("5_krre8")
+
+[connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_pressed"]

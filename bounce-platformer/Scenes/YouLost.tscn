@@ -1,3 +1,33 @@
 [gd_scene format=3 uid="uid://btdab2u550l1v"]
 
-[node name="Youlost" type="Node2D" unique_id=705399274]
+[ext_resource type="Texture2D" uid="uid://bhw4oybppccdx" path="res://Images/Backgrounds/Background5.png" id="1_tcyly"]
+[ext_resource type="Texture2D" uid="uid://db0320vs7cett" path="res://Images/GUI/Gameover.png" id="2_iwqgb"]
+[ext_resource type="Texture2D" uid="uid://fp0qkaqp2fgo" path="res://Images/GUI/Retry Button/retry_button.png" id="3_ixhko"]
+[ext_resource type="Texture2D" uid="uid://d2a2o7qtfshux" path="res://Images/GUI/Retry Button/retry_button_pressed.png" id="4_ijyaq"]
+[ext_resource type="Script" uid="uid://c56uecnibk08c" path="res://Scripts/RetryButton.gd" id="5_dbjmx"]
+
+[node name="Youlost" type="Control" unique_id=1837982772]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Background5" type="Sprite2D" parent="." unique_id=1037314537]
+position = Vector2(512, 515)
+scale = Vector2(4.029412, 4.0078125)
+texture = ExtResource("1_tcyly")
+
+[node name="Gameover" type="Sprite2D" parent="." unique_id=100166000]
+position = Vector2(544, 361.00003)
+scale = Vector2(4.0205884, 4.020589)
+texture = ExtResource("2_iwqgb")
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=903487190]
+layout_mode = 0
+offset_left = 382.0
+offset_top = 734.0
+offset_right = 638.0
+offset_bottom = 878.0
+texture_normal = ExtResource("3_ixhko")
+texture_pressed = ExtResource("4_ijyaq")
+script = ExtResource("5_dbjmx")
+
+[connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_pressed"]

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dte8m8u8abg25"]
 
 [ext_resource type="Texture2D" uid="uid://bi0skdcmkxg6a" path="res://Images/GUI/Play Button/play_button.png" id="1_6pedr"]
-[ext_resource type="Texture2D" uid="uid://ciefil7x1ple0" path="res://Images/GUI/thumbnail.png" id="1_syfuq"]
+[ext_resource type="Texture2D" uid="uid://tbfgoojm61n6" path="res://Images/Backgrounds/Background2.png" id="1_syfuq"]
 [ext_resource type="Script" uid="uid://d0qkpcucxeb5u" path="res://Scripts/Play_button_pressed.gd" id="1_uubjt"]
 
 [node name="Menu" type="Control" unique_id=1601836536]
@@ -13,8 +13,8 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Thumbnail" type="Sprite2D" parent="." unique_id=1619564816]
-position = Vector2(514.5, 510.5)
-scale = Vector2(1.6269841, 2.046)
+position = Vector2(511.7798, 511.55606)
+scale = Vector2(4.0174136, 4.019094)
 texture = ExtResource("1_syfuq")
 
 [node name="TextureButton" type="TextureButton" parent="." unique_id=1590347015]
