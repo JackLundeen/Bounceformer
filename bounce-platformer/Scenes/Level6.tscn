@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://x06ya18onrav"]
 
-[ext_resource type="Texture2D" uid="uid://cslkiayq5es5t" path="res://Images/Backgrounds/Background3.png" id="1_xgqih"]
+[ext_resource type="Texture2D" uid="uid://tbfgoojm61n6" path="res://Images/Backgrounds/Background2.png" id="1_xgqih"]
 [ext_resource type="Script" uid="uid://08tbuywv8knb" path="res://Scripts/Player.gd" id="2_2fq2u"]
 [ext_resource type="Texture2D" uid="uid://ba885i7gpdvgm" path="res://Images/Knight player images/knight_idle.png" id="3_nd4y6"]
 [ext_resource type="Script" uid="uid://u78mrscjyi7h" path="res://Scripts/player_image.gd" id="4_fdpi5"]
