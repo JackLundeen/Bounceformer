@@ -33,14 +33,14 @@ func _physics_process(delta: float) -> void:
 			bullets.add_child(Bullet)
 			Bullet.directionx = 1
 			Bullet.directiony = -1
-			Bullet.global_position.x = global_position.x + 10
+			Bullet.global_position.x = global_position.x + 25
 			Bullet.global_position.y = global_position.y - 5
 		elif player.texture == load('res://Images/Knight player images/knight_up_left.png'):
 			var Bullet = bullet.instantiate()
 			bullets.add_child(Bullet)
 			Bullet.directionx = -1
 			Bullet.directiony = -1
-			Bullet.global_position.x = global_position.x - 10
+			Bullet.global_position.x = global_position.x - 25
 			Bullet.global_position.y = global_position.y - 5
 	if global_position.x > 1024:
 		if Level != 10:
