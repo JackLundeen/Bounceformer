@@ -40,6 +40,7 @@ func _physics_process(delta):
 		for Skeleton in Skeletons.get_children():
 			if collision.get_collider() == Skeleton:
 				Skeleton.queue_free()
+
 		
 func clearBullets():
 	queue_free()

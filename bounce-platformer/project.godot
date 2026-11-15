@@ -17,7 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Level="*uid://dwcahqt5gyny0"
+Main="*uid://dwcahqt5gyny0"
 
 [display]
 
