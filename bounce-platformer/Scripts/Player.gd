@@ -8,7 +8,6 @@ const JUMP_VELOCITY = -300.0
 @onready var lives = $'../Lives'
 @onready var bullets = $'../Bullets' 
 @onready var player = $'../Player/Sprite2D'
-@onready var Level = $'Menu/Menu/Level'
 
 func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("shoot"):
@@ -45,7 +44,7 @@ func _physics_process(delta: float) -> void:
 	if global_position.x > 1024:
 		if Level.Level != 10:
 			Level.Level += 1
-			get_tree().change_scene_to_file('res://Scenes/Level' + str(Level) + '.tscn')
+			get_tree().change_scene_to_file('res://Scenes/Level' + str(Level.Level) + '.tscn')
 		else:
 			get_tree().change_scene_to_file('res://Scenes/YouWin.tscn')
 		

@@ -1,3 +1,3 @@
-extends Node2D
+extends Node
 
 var Level = 1

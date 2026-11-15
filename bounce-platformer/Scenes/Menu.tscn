@@ -3,7 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://bi0skdcmkxg6a" path="res://Images/GUI/Play Button/play_button.png" id="1_6pedr"]
 [ext_resource type="Texture2D" uid="uid://tbfgoojm61n6" path="res://Images/Backgrounds/Background2.png" id="1_syfuq"]
 [ext_resource type="Script" uid="uid://d0qkpcucxeb5u" path="res://Scripts/Play_button_pressed.gd" id="1_uubjt"]
-[ext_resource type="Script" uid="uid://bx40i8tjiju41" path="res://Scripts/Level.gd" id="4_s2c3o"]
 
 [node name="Menu" type="Control" unique_id=1601836536]
 layout_mode = 3
@@ -31,9 +30,6 @@ script = ExtResource("1_uubjt")
 position = Vector2(186.88889, 123)
 scale = Vector2(1.4444444, 1.4444444)
 texture = ExtResource("1_6pedr")
-
-[node name="Level" type="Node2D" parent="." unique_id=1107305787]
-script = ExtResource("4_s2c3o")
 
 [connection signal="button_down" from="TextureButton" to="TextureButton" method="_on_button_down"]
 [connection signal="button_up" from="TextureButton" to="TextureButton" method="_on_button_up"]
