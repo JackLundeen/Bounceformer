@@ -1,8 +1,8 @@
 [gd_scene format=4 uid="uid://bwxuefefhdn6s"]
 
-[ext_resource type="Script" uid="uid://08tbuywv8knb" path="res://Movement.gd" id="1_joc8x"]
+[ext_resource type="Script" uid="uid://08tbuywv8knb" path="res://Scripts/Movement.gd" id="1_joc8x"]
 [ext_resource type="Texture2D" uid="uid://ba885i7gpdvgm" path="res://Images/Knight player images/knight_idle.png" id="2_joc8x"]
-[ext_resource type="Script" uid="uid://u78mrscjyi7h" path="res://Scenes/player_image.gd" id="3_jghel"]
+[ext_resource type="Script" uid="uid://u78mrscjyi7h" path="res://Scripts/player_image.gd" id="3_jghel"]
 [ext_resource type="Texture2D" uid="uid://dd35nf55cyg1l" path="res://Images/Tiles/base_tile.png" id="5_bdlbp"]
 [ext_resource type="Texture2D" uid="uid://b42v34ancgu6c" path="res://Images/Backgrounds/Background1.png" id="5_slnnj"]
 [ext_resource type="Texture2D" uid="uid://bxnr4d25dqkur" path="res://Images/Tiles/base_tile_stairs.png" id="6_2h8qs"]
