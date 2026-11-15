@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dte8m8u8abg25"]
 
+[ext_resource type="Texture2D" uid="uid://bi0skdcmkxg6a" path="res://Images/GUI/Play Button/play_button.png" id="1_6pedr"]
 [ext_resource type="Script" uid="uid://d0qkpcucxeb5u" path="res://Scripts/Play_button_pressed.gd" id="1_uubjt"]
 
 [node name="Menu" type="Control" unique_id=1601836536]
@@ -10,14 +11,19 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Button" type="Button" parent="." unique_id=1651398818]
+[node name="TextureButton" type="TextureButton" parent="." unique_id=1590347015]
 layout_mode = 0
-offset_left = 358.0
-offset_top = 477.0
-offset_right = 665.0
-offset_bottom = 542.0
-text = "PLAY"
+offset_left = 314.0
+offset_top = 684.0
+offset_right = 692.2308
+offset_bottom = 928.0
+mouse_default_cursor_shape = 2
 script = ExtResource("1_uubjt")
 
-[connection signal="button_down" from="Button" to="Button" method="_on_button_down"]
-[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[node name="Sprite2D" type="Sprite2D" parent="TextureButton" unique_id=1720007596]
+position = Vector2(186.88889, 123)
+scale = Vector2(1.4444444, 1.4444444)
+texture = ExtResource("1_6pedr")
+
+[connection signal="button_down" from="TextureButton" to="TextureButton" method="_on_button_down"]
+[connection signal="button_up" from="TextureButton" to="TextureButton" method="_on_button_up"]
