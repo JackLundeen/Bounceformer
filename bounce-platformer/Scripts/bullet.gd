@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+@onready var player = $'../../Player'
+@onready var lives = $'../../Lives'
 
 var speed = 150
 var directionx = 1
@@ -31,4 +33,9 @@ func _physics_process(delta):
 	if collision:
 		directionx = -directionx
 		directiony = -directiony
+		print(collision.get_collider())
+		if collision.get_collider() == player:
+			lives.lostLife()
 		
+func clearBullets():
+	queue_free()

@@ -10,6 +10,10 @@
 [ext_resource type="Texture2D" uid="uid://yjcf8ojwahh1" path="res://Images/Tiles/cracked_tile_stairs.png" id="8_6jj8j"]
 [ext_resource type="Texture2D" uid="uid://b4j1fi2iwj4yu" path="res://Images/Tiles/mossy_tile.png" id="9_06um6"]
 [ext_resource type="Texture2D" uid="uid://do6qn67jjskfr" path="res://Images/Tiles/mossy_tile_stairs.png" id="10_ubfni"]
+[ext_resource type="Texture2D" uid="uid://svj5an7yjeb1" path="res://Images/GUI/Heart Containers/Full Heart.png" id="11_2h8qs"]
+[ext_resource type="Script" uid="uid://dj8lfq6fs2kmk" path="res://Scripts/lives.gd" id="11_rpty4"]
+[ext_resource type="Script" uid="uid://hce04g5gqa7h" path="res://Scenes/skeleton.gd" id="13_06um6"]
+[ext_resource type="Texture2D" uid="uid://cn2dsqj5ch6a3" path="res://Images/Enemies/Skeleton/skeleton_left1.png" id="14_ubfni"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
 size = Vector2(30, 56)
@@ -86,6 +90,9 @@ sources/3 = SubResource("TileSetAtlasSource_q1ws5")
 sources/4 = SubResource("TileSetAtlasSource_yji5v")
 sources/5 = SubResource("TileSetAtlasSource_ulvkb")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yf5fn"]
+size = Vector2(30, 53)
+
 [node name="Level1" type="Node2D" unique_id=1693253945]
 
 [node name="Background" type="Sprite2D" parent="." unique_id=981056759]
@@ -109,3 +116,39 @@ tile_map_data = PackedByteArray("AAAAADYAAAAAAAAAAAAAADcAAAAAAAEAAAABADYAAAABAAA
 tile_set = SubResource("TileSet_g4v7s")
 
 [node name="Bullets" type="Node2D" parent="." unique_id=2078719484]
+
+[node name="Lives" type="Node2D" parent="." unique_id=2004244050]
+script = ExtResource("11_rpty4")
+
+[node name="Life1" type="Sprite2D" parent="Lives" unique_id=299148729]
+position = Vector2(48, 45)
+texture = ExtResource("11_2h8qs")
+
+[node name="Life2" type="Sprite2D" parent="Lives" unique_id=1171427480]
+position = Vector2(145, 45)
+texture = ExtResource("11_2h8qs")
+
+[node name="Life3" type="Sprite2D" parent="Lives" unique_id=405478403]
+position = Vector2(241, 45)
+texture = ExtResource("11_2h8qs")
+
+[node name="Skeleton" type="CharacterBody2D" parent="." unique_id=1492648590]
+position = Vector2(814, 772)
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("13_06um6")
+
+[node name="Sprite2D" type="Sprite2D" parent="Skeleton" unique_id=1226736008]
+texture = ExtResource("14_ubfni")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Skeleton" unique_id=194637980]
+position = Vector2(-1, -1.5)
+shape = SubResource("RectangleShape2D_yf5fn")
+
+[node name="RayCast2DR" type="RayCast2D" parent="Skeleton" unique_id=737301203]
+position = Vector2(-1, -1)
+target_position = Vector2(-62, 39)
+collision_mask = 3
+
+[node name="RayCast2DL" type="RayCast2D" parent="Skeleton" unique_id=366302634]
+target_position = Vector2(56, 37)
