@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bvfbrw3hp76wy"
+path="res://.godot/imported/JDSherbert - Pixel Game Essentials SFX Pack - Level Complete 1.ogg-612a9fcf98b83169ccc32ed698b9684a.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/JDSherbert - Pixel Game Essentials SFX Pack (FREE)/Stereo/ogg/JDSherbert - Pixel Game Essentials SFX Pack - Level Complete 1.ogg"
+dest_files=["res://.godot/imported/JDSherbert - Pixel Game Essentials SFX Pack - Level Complete 1.ogg-612a9fcf98b83169ccc32ed698b9684a.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

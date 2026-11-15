@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c3thui0k87788"
+path="res://.godot/imported/JDSherbert - Pixel Game Essentials SFX Pack - Jump 2.ogg-aeae5a1205a099853afc78c76053e4df.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/JDSherbert - Pixel Game Essentials SFX Pack (FREE)/Stereo/ogg/JDSherbert - Pixel Game Essentials SFX Pack - Jump 2.ogg"
+dest_files=["res://.godot/imported/JDSherbert - Pixel Game Essentials SFX Pack - Jump 2.ogg-aeae5a1205a099853afc78c76053e4df.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

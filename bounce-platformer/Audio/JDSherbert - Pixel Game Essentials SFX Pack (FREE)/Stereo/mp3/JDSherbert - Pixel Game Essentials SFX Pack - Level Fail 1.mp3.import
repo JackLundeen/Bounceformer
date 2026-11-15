@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bnp4nxx6tg4h2"
+path="res://.godot/imported/JDSherbert - Pixel Game Essentials SFX Pack - Level Fail 1.mp3-5abfe968b76da3066f607be472c1324f.mp3str"
+
+[deps]
+
+source_file="res://Audio/JDSherbert - Pixel Game Essentials SFX Pack (FREE)/Stereo/mp3/JDSherbert - Pixel Game Essentials SFX Pack - Level Fail 1.mp3"
+dest_files=["res://.godot/imported/JDSherbert - Pixel Game Essentials SFX Pack - Level Fail 1.mp3-5abfe968b76da3066f607be472c1324f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

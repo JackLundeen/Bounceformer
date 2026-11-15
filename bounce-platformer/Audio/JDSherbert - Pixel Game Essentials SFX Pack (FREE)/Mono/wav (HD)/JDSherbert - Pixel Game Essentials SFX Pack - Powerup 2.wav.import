@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://n82ilprj1igj"
+path="res://.godot/imported/JDSherbert - Pixel Game Essentials SFX Pack - Powerup 2.wav-a5e65fec15455f714a0f0b971f0840fa.sample"
+
+[deps]
+
+source_file="res://Audio/JDSherbert - Pixel Game Essentials SFX Pack (FREE)/Mono/wav (HD)/JDSherbert - Pixel Game Essentials SFX Pack - Powerup 2.wav"
+dest_files=["res://.godot/imported/JDSherbert - Pixel Game Essentials SFX Pack - Powerup 2.wav-a5e65fec15455f714a0f0b971f0840fa.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
