@@ -97,7 +97,7 @@ sources/5 = SubResource("TileSetAtlasSource_pgwfc")
 position = Vector2(26, -5)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1081971171]
-position = Vector2(512, 510.00003)
+position = Vector2(487, 519)
 scale = Vector2(4.0333333, 4.0195313)
 texture = ExtResource("1_5545o")
 
