@@ -10,14 +10,17 @@ var speed = 0
 @onready var RayR = $'RayCast2DR'
 @onready var RayL = $'RayCast2DL'
 @onready var map = $'../../TileMapLayer'
+@onready var sprite = $'Sprite2D'
 
 func _physics_process(delta):
 	
 	
 	if player.global_position.x < global_position.x: 
 		speed = -SPEED
+		sprite.texture = load('res://Images/Enemies/Skeleton/skeleton_left1.png')
 	else:
 		speed = SPEED
+		sprite.texture = load('res://Images/Enemies/Skeleton/skeleton_right1.png')
 	
 	# Add the gravity.
 	if not is_on_floor():
