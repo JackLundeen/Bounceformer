@@ -369,7 +369,7 @@ shape = SubResource("RectangleShape2D_ffujx")
 texture = ExtResource("6_eaoah")
 
 [node name="Skeleton21" type="CharacterBody2D" parent="Skeletons" unique_id=1474114594]
-position = Vector2(282, 615)
+position = Vector2(290, 612)
 collision_layer = 3
 collision_mask = 3
 script = ExtResource("5_th53v")
