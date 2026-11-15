@@ -5,6 +5,7 @@ var Lives = 3
 @onready var heart2 = $'../Lives/Life2'
 @onready var player = $'../Player'
 @onready var bullets = $'../Bullets'
+@onready var Skeletons = $'../Skeletons'
 
 
 func lostLife():
@@ -17,6 +18,10 @@ func lostLife():
 		player.respawn()
 		for bullet in bullets.get_children():
 			bullet.queue_free()
+		for Skeleton in Skeletons.get_children():
+			print('test')
+			Skeleton.global_position.x = Skeleton.startX
+			Skeleton.global_position.y = Skeleton.startY
 	else:
 		get_tree().change_scene_to_file('res://Scenes/YouLost.tscn')
 	

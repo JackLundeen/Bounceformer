@@ -1,13 +1,16 @@
 extends CharacterBody2D
 
-
+var startX = global_position.x
+var startY = global_position.y
 const SPEED = 5.0
 var speed = 0
-@onready var player = $'../Player'
-@onready var lives = $'../Lives'
+
+@onready var player = $'../../Player'
+@onready var lives = $'../../Lives'
 @onready var RayR = $'RayCast2DR'
 @onready var RayL = $'RayCast2DL'
-@onready var map = $'../TileMapLayer'
+@onready var map = $'../../TileMapLayer'
+
 func _physics_process(delta):
 	
 	
@@ -24,7 +27,7 @@ func _physics_process(delta):
 	
 	if RayR.get_collider() == player or RayL.get_collider() == player:
 		lives.lostLife()
-		await get_tree().create_timer(1).timeout
+		
 	if speed < 0:
 		if RayR.get_collider() != map:
 			speed = 0

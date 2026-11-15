@@ -132,23 +132,25 @@ texture = ExtResource("11_2h8qs")
 position = Vector2(241, 45)
 texture = ExtResource("11_2h8qs")
 
-[node name="Skeleton" type="CharacterBody2D" parent="." unique_id=1492648590]
+[node name="Skeletons" type="Node2D" parent="." unique_id=1233833294]
+
+[node name="Skeleton" type="CharacterBody2D" parent="Skeletons" unique_id=1492648590]
 position = Vector2(814, 772)
 collision_layer = 3
 collision_mask = 3
 script = ExtResource("13_06um6")
 
-[node name="Sprite2D" type="Sprite2D" parent="Skeleton" unique_id=1226736008]
-texture = ExtResource("14_ubfni")
+[node name="RayCast2DL" type="RayCast2D" parent="Skeletons/Skeleton" unique_id=366302634]
+target_position = Vector2(56, 37)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Skeleton" unique_id=194637980]
-position = Vector2(-1, -1.5)
-shape = SubResource("RectangleShape2D_yf5fn")
-
-[node name="RayCast2DR" type="RayCast2D" parent="Skeleton" unique_id=737301203]
+[node name="RayCast2DR" type="RayCast2D" parent="Skeletons/Skeleton" unique_id=737301203]
 position = Vector2(-1, -1)
 target_position = Vector2(-62, 39)
 collision_mask = 3
 
-[node name="RayCast2DL" type="RayCast2D" parent="Skeleton" unique_id=366302634]
-target_position = Vector2(56, 37)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Skeletons/Skeleton" unique_id=194637980]
+position = Vector2(-1, -1.5)
+shape = SubResource("RectangleShape2D_yf5fn")
+
+[node name="Sprite2D" type="Sprite2D" parent="Skeletons/Skeleton" unique_id=1226736008]
+texture = ExtResource("14_ubfni")
