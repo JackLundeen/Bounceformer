@@ -1,11 +1,12 @@
-extends Area2D
+extends CharacterBody2D
 
 
-var speed = 300
+var speed = 150
 var directionx = 1
 var directiony = 1
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _physics_process(delta):
 	position.x += speed * directionx * delta
 	position.y += speed * directiony * delta
 	
@@ -25,4 +26,9 @@ func _process(delta: float) -> void:
 		directionx = -directionx
 		directiony = -directiony
 		global_position.y = 1023
+		
+	var collision = move_and_collide(Vector2(speed * directionx, speed * directiony) * delta)
+	if collision:
+		directionx = -directionx
+		directiony = -directiony
 		
