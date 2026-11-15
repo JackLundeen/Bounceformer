@@ -3,7 +3,6 @@ extends CharacterBody2D
 
 const SPEED = 200.0
 const JUMP_VELOCITY = -300.0
-var Level = 1
 
 @onready var bullet = preload('res://Scenes/bullet.tscn')
 @onready var lives = $'../Lives'
@@ -43,9 +42,9 @@ func _physics_process(delta: float) -> void:
 			Bullet.global_position.x = global_position.x - 25
 			Bullet.global_position.y = global_position.y - 5
 	if global_position.x > 1024:
-		if Level != 10:
-			Level += 1
-			get_tree().change_scene_to_file('res://Scenes/Level' + str(Level) + '.tscn')
+		if Main.Level != 10:
+			Main.Level += 1
+			get_tree().change_scene_to_file('res://Scenes/Level' + str(Main.Level) + '.tscn')
 		else:
 			get_tree().change_scene_to_file('res://Scenes/YouWin.tscn')
 		
