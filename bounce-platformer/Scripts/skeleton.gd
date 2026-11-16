@@ -4,6 +4,7 @@ var startX = global_position.x
 var startY = global_position.y
 const SPEED = 5.0
 var speed = 0
+var type = 'normal'
 
 @onready var player = $'../../Player'
 @onready var lives = $'../../Lives'
@@ -12,15 +13,28 @@ var speed = 0
 @onready var map = $'../../TileMapLayer'
 @onready var sprite = $'Sprite2D'
 
+func _ready():
+	if sprite.texture == load('res://Images/Enemies/Skeleton/skeleton_left1.png'):
+		type = 'normal'
+	elif sprite.texture == load('res://Images/Enemies/Skeleton/heart_skeleton_left.png'):
+		type = 'heart'
+
 func _physics_process(delta):
 	
 	
 	if player.global_position.x < global_position.x: 
 		speed = -SPEED
-		sprite.texture = load('res://Images/Enemies/Skeleton/skeleton_left1.png')
+		if type == 'normal':
+			sprite.texture = load('res://Images/Enemies/Skeleton/skeleton_left1.png')
+		elif type == 'heart':
+			sprite.texture = load('res://Images/Enemies/Skeleton/heart_skeleton_left.png')
+
 	else:
 		speed = SPEED
-		sprite.texture = load('res://Images/Enemies/Skeleton/skeleton_right1.png')
+		if type == 'normal':
+			sprite.texture = load('res://Images/Enemies/Skeleton/skeleton_right1.png')
+		elif type == 'heart':
+			sprite.texture = load('res://Images/Enemies/Skeleton/heart_skeleton_right.png')
 	
 	# Add the gravity.
 	if not is_on_floor():

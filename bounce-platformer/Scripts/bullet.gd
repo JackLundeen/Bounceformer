@@ -35,6 +35,8 @@ func _physics_process(delta):
 			lives.lostLife()
 		for Skeleton in Skeletons.get_children():
 			if collision.get_collider() == Skeleton:
+				if Skeleton.type == 'heart':
+					lives.addLife()
 				Skeleton.queue_free()
 
 		
