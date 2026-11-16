@@ -5,31 +5,18 @@ extends CharacterBody2D
 @onready var Skeletons = $'../../Skeletons'
 
 var speed = 150
-var directionx = 1
-var directiony = 1
+var directionx = 0
+var directiony = 0
 
+func _ready():
+	velocity = Vector2(speed * directionx, speed * directiony)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
-	position.x += speed * directionx * delta
-	position.y += speed * directiony * delta
-	
-	if global_position.x <= 0:
-		directionx = -directionx
-		global_position.x = 1
-	elif global_position.x >= 1024:
-		directionx = -directionx
-		global_position.x = 1023
-	if global_position.y <= 0:
-		directiony = -directiony
-		global_position.y = 1
-	elif global_position.y >= 1024:
-		directiony = -directiony
-		global_position.y = 1023
-		
-	var collision = move_and_collide(Vector2(speed * directionx, speed * directiony) * delta)
+
+	var collision = move_and_collide(Vector2(velocity * delta))
+	move_and_slide()
 	if collision:
-		directionx = -directionx
-		directiony = -directiony
+		velocity = velocity.bounce(collision.get_normal())
 		print(collision.get_collider())
 		if collision.get_collider() == player:
 			lives.lostLife()

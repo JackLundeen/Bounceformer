@@ -27,7 +27,7 @@ mouse_default_cursor_shape = 2
 script = ExtResource("1_uubjt")
 
 [node name="Sprite2D" type="Sprite2D" parent="TextureButton" unique_id=1720007596]
-position = Vector2(203, 173)
+position = Vector2(207, 173)
 scale = Vector2(1.4444444, 1.4444444)
 texture = ExtResource("1_6pedr")
 
