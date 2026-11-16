@@ -5,11 +5,13 @@ extends Node2D
 @onready var player = $'../Player'
 @onready var bullets = $'../Bullets'
 @onready var Skeletons = $'../Skeletons'
+
 func _ready():
 	if Main.Lives == 2:
 		heart1.texture = load('res://Images/GUI/Heart Containers/Empty Heart.png')
-	elif Main.Lives == 1:
+	if Main.Lives == 1:
 		heart2.texture = load('res://Images/GUI/Heart Containers/Empty Heart.png')
+		heart1.texture = load('res://Images/GUI/Heart Containers/Empty Heart.png')
 
 func lostLife():
 	if Main.Lives > 1:
