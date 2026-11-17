@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bi0skdcmkxg6a" path="res://Images/GUI/Play Button/play_button.png" id="1_6pedr"]
 [ext_resource type="Texture2D" uid="uid://tbfgoojm61n6" path="res://Images/Backgrounds/Background2.png" id="1_syfuq"]
 [ext_resource type="Script" uid="uid://d0qkpcucxeb5u" path="res://Scripts/Play_button_pressed.gd" id="1_uubjt"]
+[ext_resource type="Script" uid="uid://dvdqffpq16bx6" path="res://Scripts/SettingsButton.gd" id="4_s2c3o"]
 
 [node name="Menu" type="Control" unique_id=1601836536]
 layout_mode = 3
@@ -12,7 +13,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Thumbnail" type="Sprite2D" parent="." unique_id=1619564816]
+[node name="Background" type="Sprite2D" parent="." unique_id=1619564816]
 position = Vector2(511.7798, 511.55606)
 scale = Vector2(4.0174136, 4.019094)
 texture = ExtResource("1_syfuq")
@@ -31,5 +32,15 @@ position = Vector2(207, 173)
 scale = Vector2(1.4444444, 1.4444444)
 texture = ExtResource("1_6pedr")
 
+[node name="Button" type="Button" parent="." unique_id=359849651]
+layout_mode = 0
+offset_left = 310.0
+offset_top = 620.0
+offset_right = 745.0
+offset_bottom = 743.0
+text = "Settings"
+script = ExtResource("4_s2c3o")
+
 [connection signal="button_down" from="TextureButton" to="TextureButton" method="_on_button_down"]
 [connection signal="button_up" from="TextureButton" to="TextureButton" method="_on_button_up"]
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
