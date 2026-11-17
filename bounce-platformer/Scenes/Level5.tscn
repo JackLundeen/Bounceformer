@@ -94,6 +94,18 @@ sources/3 = SubResource("TileSetAtlasSource_6vi66")
 sources/4 = SubResource("TileSetAtlasSource_b8ctc")
 sources/5 = SubResource("TileSetAtlasSource_pgwfc")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7x805"]
+size = Vector2(20, 1024)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bmpu8"]
+size = Vector2(1050, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c4srv"]
+size = Vector2(20, 1049)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_040y1"]
+size = Vector2(1063, 13)
+
 [node name="Level5" type="Node2D" unique_id=28839527]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1081971171]
@@ -302,3 +314,23 @@ texture = ExtResource("14_ikm1e")
 [node name="Life3" type="Sprite2D" parent="Lives" unique_id=465094901]
 position = Vector2(241, 45)
 texture = ExtResource("14_ikm1e")
+
+[node name="Walls" type="StaticBody2D" parent="." unique_id=175261603]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls" unique_id=1986085052]
+position = Vector2(-10, 512)
+shape = SubResource("RectangleShape2D_7x805")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls" unique_id=1689643097]
+position = Vector2(510, -10)
+shape = SubResource("RectangleShape2D_bmpu8")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Walls" unique_id=1776866273]
+position = Vector2(1034, 522.5)
+shape = SubResource("RectangleShape2D_c4srv")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Walls" unique_id=808704918]
+position = Vector2(510.5, 1030.5)
+shape = SubResource("RectangleShape2D_040y1")

@@ -103,6 +103,18 @@ font_size = 44
 outline_size = 12
 outline_color = Color(0, 0, 0, 1)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_57qmd"]
+size = Vector2(20, 1024)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d0u6y"]
+size = Vector2(1050, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3gngh"]
+size = Vector2(20, 1049)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fcnqv"]
+size = Vector2(1063, 13)
+
 [node name="Level1" type="Node2D" unique_id=1693253945]
 
 [node name="Background" type="Sprite2D" parent="." unique_id=981056759]
@@ -182,3 +194,23 @@ offset_right = 663.0
 offset_bottom = 161.0
 text = "Controls"
 label_settings = SubResource("LabelSettings_mni53")
+
+[node name="Walls" type="StaticBody2D" parent="." unique_id=817257604]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls" unique_id=1536883386]
+position = Vector2(-10, 512)
+shape = SubResource("RectangleShape2D_57qmd")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls" unique_id=82789176]
+position = Vector2(510, -10)
+shape = SubResource("RectangleShape2D_d0u6y")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Walls" unique_id=274829764]
+position = Vector2(1034, 522.5)
+shape = SubResource("RectangleShape2D_3gngh")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Walls" unique_id=127454754]
+position = Vector2(510.5, 1030.5)
+shape = SubResource("RectangleShape2D_fcnqv")
