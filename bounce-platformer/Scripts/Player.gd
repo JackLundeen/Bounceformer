@@ -20,6 +20,7 @@ func _physics_process(delta: float) -> void:
 			Bullet.directiony = randfn(-0.01, 0.01)
 			Bullet.global_position.x = global_position.x + 20
 			Bullet.global_position.y = global_position.y + 5
+			Bullet.velocity = Vector2(Bullet.directionx, Bullet.directiony).normalized() * Bullet.speed
 		elif player.texture == load('res://Images/Knight player images/knight_left.png'):
 			var Bullet = bullet.instantiate()
 			bullets.add_child(Bullet)
@@ -27,6 +28,7 @@ func _physics_process(delta: float) -> void:
 			Bullet.directiony = randfn(-0.01, 0.01)
 			Bullet.global_position.x = global_position.x - 20
 			Bullet.global_position.y = global_position.y + 5
+			Bullet.velocity = Vector2(Bullet.directionx, Bullet.directiony).normalized() * Bullet.speed
 		elif player.texture == load('res://Images/Knight player images/knight_up_right.png'):
 			var Bullet = bullet.instantiate()
 			bullets.add_child(Bullet)
@@ -34,6 +36,7 @@ func _physics_process(delta: float) -> void:
 			Bullet.directiony = -1
 			Bullet.global_position.x = global_position.x + 25
 			Bullet.global_position.y = global_position.y - 5
+			Bullet.velocity = Vector2(Bullet.directionx, Bullet.directiony).normalized() * Bullet.speed
 		elif player.texture == load('res://Images/Knight player images/knight_up_left.png'):
 			var Bullet = bullet.instantiate()
 			bullets.add_child(Bullet)
@@ -41,6 +44,7 @@ func _physics_process(delta: float) -> void:
 			Bullet.directiony = -1
 			Bullet.global_position.x = global_position.x - 25
 			Bullet.global_position.y = global_position.y - 5
+			Bullet.velocity = Vector2(Bullet.directionx, Bullet.directiony).normalized() * Bullet.speed
 	if global_position.x > 1024:
 		if Main.Level != 10:
 			Main.Level += 1
