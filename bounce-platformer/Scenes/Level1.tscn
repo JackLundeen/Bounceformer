@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://dfsmfil783s1v"]
 
 [ext_resource type="Script" uid="uid://08tbuywv8knb" path="res://Scripts/Player.gd" id="1_joc8x"]
+[ext_resource type="Texture2D" uid="uid://biscpydhuahnf" path="res://Images/GUI/ClickToShoot.png" id="2_fh0sh"]
 [ext_resource type="Texture2D" uid="uid://c7wq7ia2kcv8g" path="res://Images/Knight player images/knight_bottom.png" id="3_06um6"]
 [ext_resource type="Script" uid="uid://u78mrscjyi7h" path="res://Scripts/Gun.gd" id="3_jghel"]
 [ext_resource type="Texture2D" uid="uid://c3l7bs5w3ddfn" path="res://Images/Knight player images/knight_head_right.png" id="4_0wsr5"]
@@ -218,6 +219,11 @@ animations = [{
 position = Vector2(512.75, 515.26666)
 scale = Vector2(4.0333333, 4.0333333)
 texture = ExtResource("5_slnnj")
+
+[node name="ClickToShoot" type="Sprite2D" parent="." unique_id=1797200048]
+position = Vector2(168, 291.99997)
+scale = Vector2(10.738282, 9.829218)
+texture = ExtResource("2_fh0sh")
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=878792986]
 position = Vector2(19, 834)

@@ -16,7 +16,6 @@ func _ready():
 
 func lostLife():
 	if Main.Lives > 1:
-		Main.Lives -= 1
 		if Main.Lives == 2:
 			heart1.texture = load('res://Images/GUI/Heart Containers/Empty Heart.png')
 		elif Main.Lives == 1:
@@ -25,9 +24,15 @@ func lostLife():
 		for bullet in bullets.get_children():
 			bullet.queue_free()
 		for Skeleton in Skeletons.get_children():
-			print('test')
 			Skeleton.global_position.x = Skeleton.startX
 			Skeleton.global_position.y = Skeleton.startY
+			await get_tree().create_timer(0.1).timeout
+			Main.Lives -= 1
+			print(Main.Lives)
+			if Main.Lives == 2:
+				heart1.texture = load('res://Images/GUI/Heart Containers/Empty Heart.png')
+			elif Main.Lives == 1:
+				heart2.texture = load('res://Images/GUI/Heart Containers/Empty Heart.png')
 	else:
 		get_tree().change_scene_to_file('res://Scenes/YouLost.tscn')
 	
