@@ -1,8 +1,9 @@
 extends CharacterBody2D
 
-
+var startX = global_position.x
+var startY = global_position.y
 const SPEED = 200.0
-const JUMP_VELOCITY = -300.0
+const JUMP_VELOCITY = -350
 
 @onready var bullet = preload('res://Scenes/bullet.tscn')
 @onready var lives = $'../Lives'
@@ -48,5 +49,5 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func respawn():
-	global_position.x = 20
-	global_position.y = 820
+	global_position.x = startX
+	global_position.y = startY
