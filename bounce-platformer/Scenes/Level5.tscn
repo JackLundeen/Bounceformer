@@ -2,7 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://cslkiayq5es5t" path="res://Images/Backgrounds/Background3.png" id="1_0hflc"]
 [ext_resource type="Script" uid="uid://08tbuywv8knb" path="res://Scripts/Player.gd" id="2_7x805"]
-[ext_resource type="Texture2D" uid="uid://c1a331ku6pi84" path="res://Images/Knight player images/knight_idle.png" id="3_bmpu8"]
 [ext_resource type="Script" uid="uid://u78mrscjyi7h" path="res://Scripts/Gun.gd" id="4_c4srv"]
 [ext_resource type="Script" uid="uid://hce04g5gqa7h" path="res://Scripts/skeleton.gd" id="5_040y1"]
 [ext_resource type="Texture2D" uid="uid://cn2dsqj5ch6a3" path="res://Images/Enemies/Skeleton/skeleton_left1.png" id="6_u7l1f"]
@@ -14,10 +13,11 @@
 [ext_resource type="Texture2D" uid="uid://b4j1fi2iwj4yu" path="res://Images/Tiles/mossy_tile.png" id="11_x7gh6"]
 [ext_resource type="Texture2D" uid="uid://do6qn67jjskfr" path="res://Images/Tiles/mossy_tile_stairs.png" id="12_qn1m2"]
 [ext_resource type="Script" uid="uid://dj8lfq6fs2kmk" path="res://Scripts/lives.gd" id="13_p4yew"]
+[ext_resource type="Texture2D" uid="uid://c7wq7ia2kcv8g" path="res://Images/Knight player images/knight_bottom.png" id="14_040y1"]
 [ext_resource type="Texture2D" uid="uid://svj5an7yjeb1" path="res://Images/GUI/Heart Containers/Full Heart.png" id="14_ikm1e"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_dg25f"]
-size = Vector2(30, 56)
+[ext_resource type="Texture2D" uid="uid://c3l7bs5w3ddfn" path="res://Images/Knight player images/knight_head_right.png" id="15_u7l1f"]
+[ext_resource type="Script" uid="uid://dc1flccj5fj3r" path="res://Scripts/head.gd" id="16_7dtqy"]
+[ext_resource type="Texture2D" uid="uid://d2vj76ryhekup" path="res://Images/Knight player images/knight_gun.png" id="17_fi0mo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ffujx"]
 size = Vector2(30, 53)
@@ -106,23 +106,15 @@ size = Vector2(20, 1049)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_040y1"]
 size = Vector2(1063, 13)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gb1h0"]
+size = Vector2(28, 56)
+
 [node name="Level5" type="Node2D" unique_id=28839527]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1081971171]
 position = Vector2(510.75, 510.5)
 scale = Vector2(4.0333333, 4.0195313)
 texture = ExtResource("1_0hflc")
-
-[node name="Player" type="CharacterBody2D" parent="." unique_id=2007213488]
-position = Vector2(19, 834)
-script = ExtResource("2_7x805")
-
-[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=937449835]
-texture = ExtResource("3_bmpu8")
-script = ExtResource("4_c4srv")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1450717296]
-shape = SubResource("RectangleShape2D_dg25f")
 
 [node name="Bullets" type="Node2D" parent="." unique_id=666754420]
 
@@ -334,3 +326,25 @@ shape = SubResource("RectangleShape2D_c4srv")
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Walls" unique_id=808704918]
 position = Vector2(510.5, 1030.5)
 shape = SubResource("RectangleShape2D_040y1")
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=1733199637]
+position = Vector2(27, 835)
+script = ExtResource("2_7x805")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=927611222]
+shape = SubResource("RectangleShape2D_gb1h0")
+
+[node name="Body" type="Sprite2D" parent="Player" unique_id=437341732]
+position = Vector2(-2, 0)
+texture = ExtResource("14_040y1")
+
+[node name="Head" type="Sprite2D" parent="Player" unique_id=116170728]
+position = Vector2(-6.556511e-07, -13.999971)
+scale = Vector2(1.0604838, 1.0614909)
+texture = ExtResource("15_u7l1f")
+script = ExtResource("16_7dtqy")
+
+[node name="Gun" type="Sprite2D" parent="Player" unique_id=1252030351]
+position = Vector2(0, 8)
+texture = ExtResource("17_fi0mo")
+script = ExtResource("4_c4srv")
