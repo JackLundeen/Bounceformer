@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://coohq7pber2xt"]
+
+[ext_resource type="Texture2D" uid="uid://cg6duwow442yk" path="res://Images/Backgrounds/Background4.png" id="1_yrknh"]
+[ext_resource type="Script" uid="uid://biefkafn5kg04" path="res://Scripts/SettingsBackButton.gd" id="2_flfri"]
+[ext_resource type="Texture2D" uid="uid://rgadwn21el4g" path="res://Images/GUI/Speed Run Button/SpeedRun off.png" id="3_w1nw0"]
+[ext_resource type="Script" uid="uid://mqexbi008tya" path="res://Scripts/speedRunButton.gd" id="4_w1nw0"]
+
+[node name="Control" type="Control" unique_id=781375856]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="Sprite2D" parent="." unique_id=553693458]
+position = Vector2(511.7798, 511.55606)
+scale = Vector2(4.0174136, 4.019094)
+texture = ExtResource("1_yrknh")
+
+[node name="Button" type="Button" parent="." unique_id=1636267722]
+layout_mode = 0
+offset_left = 337.0
+offset_top = 862.0
+offset_right = 650.0
+offset_bottom = 973.0
+text = "Back"
+script = ExtResource("2_flfri")
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=873772974]
+layout_mode = 0
+offset_left = 273.0
+offset_top = -19.0
+offset_right = 733.0
+offset_bottom = 211.0
+texture_normal = ExtResource("3_w1nw0")
+stretch_mode = 0
+script = ExtResource("4_w1nw0")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_pressed"]

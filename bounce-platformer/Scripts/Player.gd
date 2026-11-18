@@ -7,44 +7,18 @@ const JUMP_VELOCITY = -300.0
 @onready var bullet = preload('res://Scenes/bullet.tscn')
 @onready var lives = $'../Lives'
 @onready var bullets = $'../Bullets' 
-@onready var player = $'../Player/Sprite2D'
+@onready var gun = $'../Player/Gun'
 
 func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("shoot"):
-		if player.texture == load('res://Images/Knight player images/knight_idle.png'):
-			pass
-		elif player.texture == load('res://Images/Knight player images/knight_right.png'):
-			var Bullet = bullet.instantiate()
-			bullets.add_child(Bullet)
-			Bullet.directionx = 1
-			Bullet.directiony = randfn(-0.01, 0.01)
-			Bullet.global_position.x = global_position.x + 20
-			Bullet.global_position.y = global_position.y + 5
-			Bullet.velocity = Vector2(Bullet.directionx, Bullet.directiony).normalized() * Bullet.speed
-		elif player.texture == load('res://Images/Knight player images/knight_left.png'):
-			var Bullet = bullet.instantiate()
-			bullets.add_child(Bullet)
-			Bullet.directionx = -1
-			Bullet.directiony = randfn(-0.01, 0.01)
-			Bullet.global_position.x = global_position.x - 20
-			Bullet.global_position.y = global_position.y + 5
-			Bullet.velocity = Vector2(Bullet.directionx, Bullet.directiony).normalized() * Bullet.speed
-		elif player.texture == load('res://Images/Knight player images/knight_up_right.png'):
-			var Bullet = bullet.instantiate()
-			bullets.add_child(Bullet)
-			Bullet.directionx = 1
-			Bullet.directiony = -1
-			Bullet.global_position.x = global_position.x + 25
-			Bullet.global_position.y = global_position.y - 5
-			Bullet.velocity = Vector2(Bullet.directionx, Bullet.directiony).normalized() * Bullet.speed
-		elif player.texture == load('res://Images/Knight player images/knight_up_left.png'):
-			var Bullet = bullet.instantiate()
-			bullets.add_child(Bullet)
-			Bullet.directionx = -1
-			Bullet.directiony = -1
-			Bullet.global_position.x = global_position.x - 25
-			Bullet.global_position.y = global_position.y - 5
-			Bullet.velocity = Vector2(Bullet.directionx, Bullet.directiony).normalized() * Bullet.speed
+		var Bullet = bullet.instantiate()
+		bullets.add_child(Bullet)
+		Bullet.directionx = cos(gun.rotation)
+		Bullet.directiony = sin(gun.rotation)
+		var offset = Vector2(25, 0).rotated(gun.global_rotation)
+		Bullet.global_position = gun.global_position + offset
+		Bullet.velocity = Vector2(Bullet.directionx, Bullet.directiony).normalized() * Bullet.speed
+
 	if global_position.x > 1024:
 		if Main.Level != 10:
 			Main.Level += 1

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dycoe22yeitoq"
-path="res://.godot/imported/knight_left.png-300fca2d4de694b51ffe2ebe13d76d79.ctex"
+uid="uid://rgadwn21el4g"
+path="res://.godot/imported/SpeedRun off.png-779141a3fdbf44f74d3125a49f45f43e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/Knight player images/knight_left.png"
-dest_files=["res://.godot/imported/knight_left.png-300fca2d4de694b51ffe2ebe13d76d79.ctex"]
+source_file="res://Images/GUI/Speed Run Button/SpeedRun off.png"
+dest_files=["res://.godot/imported/SpeedRun off.png-779141a3fdbf44f74d3125a49f45f43e.ctex"]
 
 [params]
 
