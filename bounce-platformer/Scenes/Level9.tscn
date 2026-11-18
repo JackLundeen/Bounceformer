@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://cg6duwow442yk" path="res://Images/Backgrounds/Background4.png" id="1_0ks7k"]
 [ext_resource type="Script" uid="uid://08tbuywv8knb" path="res://Scripts/Player.gd" id="2_068pi"]
-[ext_resource type="Texture2D" uid="uid://ba885i7gpdvgm" path="res://Images/Knight player images/knight_idle.png" id="3_6ibmc"]
-[ext_resource type="Script" uid="uid://u78mrscjyi7h" path="res://Scripts/player_image.gd" id="4_rshtv"]
+[ext_resource type="Texture2D" uid="uid://c1a331ku6pi84" path="res://Images/Knight player images/knight_idle.png" id="3_6ibmc"]
+[ext_resource type="Script" uid="uid://u78mrscjyi7h" path="res://Scripts/Gun.gd" id="4_rshtv"]
 [ext_resource type="Script" uid="uid://hce04g5gqa7h" path="res://Scripts/skeleton.gd" id="5_th53v"]
 [ext_resource type="Texture2D" uid="uid://cn2dsqj5ch6a3" path="res://Images/Enemies/Skeleton/skeleton_left1.png" id="6_eaoah"]
 [ext_resource type="Texture2D" uid="uid://dd35nf55cyg1l" path="res://Images/Tiles/base_tile.png" id="7_v1m54"]

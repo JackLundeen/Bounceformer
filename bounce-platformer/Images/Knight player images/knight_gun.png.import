@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmb0irbrgp5k1"
-path="res://.godot/imported/knight_up_left.png-be14896614e12c9e5e098712fcdd3829.ctex"
+uid="uid://d2vj76ryhekup"
+path="res://.godot/imported/knight_gun.png-f194f2873b1258010d8b82b78743e7d7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/Knight player images/knight_up_left.png"
-dest_files=["res://.godot/imported/knight_up_left.png-be14896614e12c9e5e098712fcdd3829.ctex"]
+source_file="res://Images/Knight player images/knight_gun.png"
+dest_files=["res://.godot/imported/knight_gun.png-f194f2873b1258010d8b82b78743e7d7.ctex"]
 
 [params]
 
