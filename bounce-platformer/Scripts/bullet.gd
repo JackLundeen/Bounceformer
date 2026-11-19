@@ -16,7 +16,7 @@ func _ready() -> void:
 	remove_collision_exception_with(player)
 	
 func _physics_process(delta):
-
+	rotation = velocity.angle()
 	var collision = move_and_collide(velocity * delta)
 	if collision:
 		velocity = velocity.bounce(collision.get_normal())
