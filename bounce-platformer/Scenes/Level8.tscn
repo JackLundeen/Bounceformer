@@ -330,7 +330,7 @@ position = Vector2(510.5, 1030.5)
 shape = SubResource("RectangleShape2D_px410")
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=2075940023]
-position = Vector2(6, 614)
+position = Vector2(-7, 838)
 script = ExtResource("2_jg0ib")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1922457856]

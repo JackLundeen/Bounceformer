@@ -6,5 +6,5 @@ var SpeedRunTimer = false
 var TimeOnRun = 0
 
 func reset():
-	Level = 7
+	Level = 1
 	Lives = 3

@@ -21,7 +21,7 @@ func _physics_process(delta: float) -> void:
 		Bullet.velocity = Vector2(Bullet.directionx, Bullet.directiony).normalized() * Bullet.speed
 
 	if global_position.x > 1024:
-		if Main.Level != 10:
+		if Main.Level != 9:
 			Main.Level += 1
 			get_tree().change_scene_to_file('res://Scenes/Level' + str(Main.Level) + '.tscn')
 		else:
