@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://cnyl13n5u5t40" path="res://Images/GUI/shield.png" id="8_03od6"]
 [ext_resource type="Texture2D" uid="uid://yjcf8ojwahh1" path="res://Images/Tiles/cracked_tile_stairs.png" id="8_6jj8j"]
 [ext_resource type="Texture2D" uid="uid://b4j1fi2iwj4yu" path="res://Images/Tiles/mossy_tile.png" id="9_06um6"]
+[ext_resource type="Script" uid="uid://cq56qcegmdeca" path="res://Scripts/Block.gd" id="9_384de"]
 [ext_resource type="Texture2D" uid="uid://do6qn67jjskfr" path="res://Images/Tiles/mossy_tile_stairs.png" id="10_ubfni"]
 [ext_resource type="Texture2D" uid="uid://svj5an7yjeb1" path="res://Images/GUI/Heart Containers/Full Heart.png" id="11_2h8qs"]
 [ext_resource type="Script" uid="uid://dj8lfq6fs2kmk" path="res://Scripts/lives.gd" id="11_rpty4"]
@@ -129,7 +130,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"Time",
-"speed": 2.0
+"speed": 1.3
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yf5fn"]
@@ -266,7 +267,8 @@ position = Vector2(980, 53)
 scale = Vector2(3.5625, 3.5625)
 sprite_frames = SubResource("SpriteFrames_yf5fn")
 animation = &"Time"
-frame_progress = 0.13618295
+frame_progress = 0.11344204
+script = ExtResource("9_384de")
 
 [node name="Bullets" type="Node2D" parent="." unique_id=2078719484]
 
