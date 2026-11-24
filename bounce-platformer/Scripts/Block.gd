@@ -1,5 +1,8 @@
 extends AnimatedSprite2D
 
+func _ready() -> void:
+	Main.block = true
+	Main.blocking = false
 
 func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("block"):

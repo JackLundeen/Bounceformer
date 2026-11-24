@@ -2,6 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://cslkiayq5es5t" path="res://Images/Backgrounds/Background3.png" id="1_ycmr1"]
 [ext_resource type="Script" uid="uid://08tbuywv8knb" path="res://Scripts/Player.gd" id="2_2jwna"]
+[ext_resource type="Texture2D" uid="uid://cnyl13n5u5t40" path="res://Images/GUI/shield.png" id="2_6skh4"]
+[ext_resource type="Script" uid="uid://cq56qcegmdeca" path="res://Scripts/Block.gd" id="3_0way5"]
 [ext_resource type="Texture2D" uid="uid://c7wq7ia2kcv8g" path="res://Images/Knight player images/knight_bottom.png" id="3_xx40l"]
 [ext_resource type="Texture2D" uid="uid://c3l7bs5w3ddfn" path="res://Images/Knight player images/knight_head_right.png" id="4_utdxf"]
 [ext_resource type="Script" uid="uid://u78mrscjyi7h" path="res://Scripts/Gun.gd" id="4_xx40l"]
@@ -19,6 +21,49 @@
 [ext_resource type="Texture2D" uid="uid://b4j1fi2iwj4yu" path="res://Images/Tiles/mossy_tile.png" id="13_0way5"]
 [ext_resource type="Texture2D" uid="uid://cl8e84lw20mya" path="res://Images/GUI/StandHere.png" id="13_8wk15"]
 [ext_resource type="Texture2D" uid="uid://do6qn67jjskfr" path="res://Images/Tiles/mossy_tile_stairs.png" id="14_cw30w"]
+[ext_resource type="Script" uid="uid://c3rbeyqi8vqjv" path="res://Scripts/block move.gd" id="20_lt7tp"]
+[ext_resource type="Texture2D" uid="uid://bf46ji15ksi0v" path="res://Images/Misc/Block.png" id="21_ibolw"]
+[ext_resource type="Script" uid="uid://cho51j1r5c8lx" path="res://Scripts/blockring.gd" id="22_6skh4"]
+[ext_resource type="Script" uid="uid://mnkvt0syvjhl" path="res://Scripts/block_ring_collision.gd" id="23_0way5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qvja8"]
+atlas = ExtResource("2_6skh4")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nlo60"]
+atlas = ExtResource("2_6skh4")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4rcpl"]
+atlas = ExtResource("2_6skh4")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iu5qg"]
+atlas = ExtResource("2_6skh4")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cw30w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qvja8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nlo60")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4rcpl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iu5qg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qvja8")
+}],
+"loop": 0,
+"name": &"Time",
+"speed": 1.3
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6cjmx"]
 size = Vector2(28, 56)
@@ -160,12 +205,23 @@ size = Vector2(20, 1049)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xx40l"]
 size = Vector2(1063, 13)
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cw30w"]
+radius = 26.0
+height = 76.0
+
 [node name="Level2" type="Node2D" unique_id=518011335]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1690776185]
 position = Vector2(510.75, 510.5)
 scale = Vector2(4.0333333, 4.0195313)
 texture = ExtResource("1_ycmr1")
+
+[node name="Shield" type="AnimatedSprite2D" parent="." unique_id=257078805]
+position = Vector2(980, 53)
+scale = Vector2(3.5625, 3.5625)
+sprite_frames = SubResource("SpriteFrames_cw30w")
+animation = &"Time"
+script = ExtResource("3_0way5")
 
 [node name="Bullets" type="Node2D" parent="." unique_id=611724210]
 
@@ -263,3 +319,19 @@ shape = SubResource("RectangleShape2D_sgc6j")
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Walls" unique_id=1490482295]
 position = Vector2(510.5, 1030.5)
 shape = SubResource("RectangleShape2D_xx40l")
+
+[node name="Block" type="StaticBody2D" parent="." unique_id=1990193073]
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("20_lt7tp")
+
+[node name="blockring" type="Sprite2D" parent="Block" unique_id=1195951962]
+scale = Vector2(1.08, 1.0799999)
+texture = ExtResource("21_ibolw")
+script = ExtResource("22_6skh4")
+
+[node name="block ring Collision" type="CollisionShape2D" parent="Block" unique_id=983309984]
+shape = SubResource("CapsuleShape2D_cw30w")
+script = ExtResource("23_0way5")
+
+[connection signal="animation_finished" from="Shield" to="Shield" method="_on_animation_finished"]

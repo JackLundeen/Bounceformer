@@ -100,6 +100,10 @@ sources/3 = SubResource("TileSetAtlasSource_0wsr5")
 sources/4 = SubResource("TileSetAtlasSource_jgorv")
 sources/5 = SubResource("TileSetAtlasSource_q1ws5")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_qvja8"]
+atlas = ExtResource("8_03od6")
+region = Rect2(32, 0, 32, 32)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_nlo60"]
 atlas = ExtResource("8_03od6")
 region = Rect2(0, 0, 32, 32)
@@ -112,13 +116,12 @@ region = Rect2(0, 32, 32, 32)
 atlas = ExtResource("8_03od6")
 region = Rect2(32, 32, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qvja8"]
-atlas = ExtResource("8_03od6")
-region = Rect2(32, 0, 32, 32)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_yf5fn"]
 animations = [{
 "frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qvja8")
+}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_nlo60")
 }, {

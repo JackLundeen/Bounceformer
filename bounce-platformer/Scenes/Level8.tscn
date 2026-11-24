@@ -1,6 +1,8 @@
 [gd_scene format=4 uid="uid://dw6wydnam76bp"]
 
+[ext_resource type="Texture2D" uid="uid://cnyl13n5u5t40" path="res://Images/GUI/shield.png" id="1_o5gt2"]
 [ext_resource type="Texture2D" uid="uid://tbfgoojm61n6" path="res://Images/Backgrounds/Background2.png" id="1_s3ayw"]
+[ext_resource type="Script" uid="uid://cq56qcegmdeca" path="res://Scripts/Block.gd" id="2_itxe5"]
 [ext_resource type="Script" uid="uid://08tbuywv8knb" path="res://Scripts/Player.gd" id="2_jg0ib"]
 [ext_resource type="Script" uid="uid://u78mrscjyi7h" path="res://Scripts/Gun.gd" id="4_px410"]
 [ext_resource type="Script" uid="uid://hce04g5gqa7h" path="res://Scripts/skeleton.gd" id="5_5stgc"]
@@ -17,6 +19,49 @@
 [ext_resource type="Texture2D" uid="uid://svj5an7yjeb1" path="res://Images/GUI/Heart Containers/Full Heart.png" id="14_ybjrb"]
 [ext_resource type="Script" uid="uid://dc1flccj5fj3r" path="res://Scripts/head.gd" id="15_7qoqo"]
 [ext_resource type="Texture2D" uid="uid://d2vj76ryhekup" path="res://Images/Knight player images/knight_gun.png" id="16_54ecx"]
+[ext_resource type="Script" uid="uid://c3rbeyqi8vqjv" path="res://Scripts/block move.gd" id="18_qeyec"]
+[ext_resource type="Texture2D" uid="uid://bf46ji15ksi0v" path="res://Images/Misc/Block.png" id="19_63jgp"]
+[ext_resource type="Script" uid="uid://cho51j1r5c8lx" path="res://Scripts/blockring.gd" id="20_o5gt2"]
+[ext_resource type="Script" uid="uid://mnkvt0syvjhl" path="res://Scripts/block_ring_collision.gd" id="21_itxe5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qvja8"]
+atlas = ExtResource("1_o5gt2")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nlo60"]
+atlas = ExtResource("1_o5gt2")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4rcpl"]
+atlas = ExtResource("1_o5gt2")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iu5qg"]
+atlas = ExtResource("1_o5gt2")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_on6lx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qvja8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nlo60")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4rcpl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iu5qg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qvja8")
+}],
+"loop": 0,
+"name": &"Time",
+"speed": 1.3
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ffujx"]
 size = Vector2(30, 53)
@@ -108,8 +153,19 @@ size = Vector2(1063, 13)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qeyec"]
 size = Vector2(28, 56)
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_on6lx"]
+radius = 26.0
+height = 76.0
+
 [node name="Level8" type="Node2D" unique_id=28839527]
 position = Vector2(26, -5)
+
+[node name="Shield" type="AnimatedSprite2D" parent="." unique_id=871909431]
+position = Vector2(980, 53)
+scale = Vector2(3.5625, 3.5625)
+sprite_frames = SubResource("SpriteFrames_on6lx")
+animation = &"Time"
+script = ExtResource("2_itxe5")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1081971171]
 position = Vector2(486, 514)
@@ -350,3 +406,19 @@ script = ExtResource("15_7qoqo")
 position = Vector2(0, 8)
 texture = ExtResource("16_54ecx")
 script = ExtResource("4_px410")
+
+[node name="Block" type="StaticBody2D" parent="." unique_id=1123568105]
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("18_qeyec")
+
+[node name="blockring" type="Sprite2D" parent="Block" unique_id=1066146485]
+scale = Vector2(1.08, 1.0799999)
+texture = ExtResource("19_63jgp")
+script = ExtResource("20_o5gt2")
+
+[node name="block ring Collision" type="CollisionShape2D" parent="Block" unique_id=1260229638]
+shape = SubResource("CapsuleShape2D_on6lx")
+script = ExtResource("21_itxe5")
+
+[connection signal="animation_finished" from="Shield" to="Shield" method="_on_animation_finished"]
