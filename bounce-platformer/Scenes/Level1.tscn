@@ -24,6 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://bif4qgwwnskok" path="res://Images/GUI/ShootHere.png" id="20_ulvkb"]
 [ext_resource type="Texture2D" uid="uid://cl8e84lw20mya" path="res://Images/GUI/StandHere.png" id="21_fh0sh"]
 [ext_resource type="Texture2D" uid="uid://bf46ji15ksi0v" path="res://Images/Misc/Block.png" id="23_384de"]
+[ext_resource type="Script" uid="uid://c3rbeyqi8vqjv" path="res://Scripts/block move.gd" id="24_1nrjw"]
 [ext_resource type="Script" uid="uid://cho51j1r5c8lx" path="res://Scripts/blockring.gd" id="25_bhaf5"]
 [ext_resource type="Script" uid="uid://mnkvt0syvjhl" path="res://Scripts/block_ring_collision.gd" id="26_o0dvq"]
 
@@ -380,13 +381,17 @@ position = Vector2(0, 8)
 texture = ExtResource("6_0wsr5")
 script = ExtResource("3_jghel")
 
-[node name="blockring" type="Sprite2D" parent="Player" unique_id=537140035]
-position = Vector2(0, -3.8146973e-06)
+[node name="Block" type="StaticBody2D" parent="." unique_id=2039179767]
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("24_1nrjw")
+
+[node name="blockring" type="Sprite2D" parent="Block" unique_id=537140035]
 scale = Vector2(1.08, 1.0799999)
 texture = ExtResource("23_384de")
 script = ExtResource("25_bhaf5")
 
-[node name="block ring Collision" type="CollisionShape2D" parent="Player" unique_id=1808434481]
+[node name="block ring Collision" type="CollisionShape2D" parent="Block" unique_id=1808434481]
 shape = SubResource("CapsuleShape2D_g4v7s")
 script = ExtResource("26_o0dvq")
 
