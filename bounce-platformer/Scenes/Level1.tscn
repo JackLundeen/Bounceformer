@@ -255,7 +255,7 @@ size = Vector2(28, 56)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g4v7s"]
 radius = 26.0
-height = 80.0
+height = 76.0
 
 [node name="Level1" type="Node2D" unique_id=1693253945]
 
