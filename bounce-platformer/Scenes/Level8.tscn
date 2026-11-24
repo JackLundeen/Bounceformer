@@ -40,7 +40,7 @@ region = Rect2(0, 32, 32, 32)
 atlas = ExtResource("1_o5gt2")
 region = Rect2(32, 32, 32, 32)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_on6lx"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_o5gt2"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -160,17 +160,17 @@ height = 76.0
 [node name="Level8" type="Node2D" unique_id=28839527]
 position = Vector2(26, -5)
 
-[node name="Shield" type="AnimatedSprite2D" parent="." unique_id=871909431]
-position = Vector2(980, 53)
-scale = Vector2(3.5625, 3.5625)
-sprite_frames = SubResource("SpriteFrames_on6lx")
-animation = &"Time"
-script = ExtResource("2_itxe5")
-
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1081971171]
 position = Vector2(486, 514)
 scale = Vector2(4.0333333, 4.0195313)
 texture = ExtResource("1_s3ayw")
+
+[node name="Shield" type="AnimatedSprite2D" parent="." unique_id=58848293]
+position = Vector2(956.00006, 52)
+scale = Vector2(3.5625, 3.5625)
+sprite_frames = SubResource("SpriteFrames_o5gt2")
+animation = &"Time"
+script = ExtResource("2_itxe5")
 
 [node name="Bullets" type="Node2D" parent="." unique_id=666754420]
 

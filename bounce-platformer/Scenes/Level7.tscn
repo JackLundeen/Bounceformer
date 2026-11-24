@@ -166,7 +166,7 @@ scale = Vector2(4.0333333, 4.0195313)
 texture = ExtResource("1_5545o")
 
 [node name="Shield" type="AnimatedSprite2D" parent="." unique_id=371756417]
-position = Vector2(980, 53)
+position = Vector2(956.00006, 52)
 scale = Vector2(3.5625, 3.5625)
 sprite_frames = SubResource("SpriteFrames_laa2w")
 animation = &"Time"

@@ -40,7 +40,7 @@ region = Rect2(0, 32, 32, 32)
 atlas = ExtResource("2_t642h")
 region = Rect2(32, 32, 32, 32)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_agfos"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_t642h"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -165,10 +165,10 @@ position = Vector2(484, 521)
 scale = Vector2(4.0333333, 4.0195313)
 texture = ExtResource("1_0ks7k")
 
-[node name="Shield" type="AnimatedSprite2D" parent="." unique_id=585907417]
-position = Vector2(980, 53)
+[node name="Shield" type="AnimatedSprite2D" parent="." unique_id=1257872756]
+position = Vector2(956.00006, 52)
 scale = Vector2(3.5625, 3.5625)
-sprite_frames = SubResource("SpriteFrames_agfos")
+sprite_frames = SubResource("SpriteFrames_t642h")
 animation = &"Time"
 script = ExtResource("3_07vyk")
 
