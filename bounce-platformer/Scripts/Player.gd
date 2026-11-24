@@ -1,8 +1,9 @@
 extends CharacterBody2D
 
-
+var startX = global_position.x
+var startY = global_position.y
 const SPEED = 200.0
-const JUMP_VELOCITY = -300.0
+const JUMP_VELOCITY = -350
 
 @onready var bullet = preload('res://Scenes/bullet.tscn')
 @onready var lives = $'../Lives'
@@ -20,7 +21,7 @@ func _physics_process(delta: float) -> void:
 		Bullet.velocity = Vector2(Bullet.directionx, Bullet.directiony).normalized() * Bullet.speed
 
 	if global_position.x > 1024:
-		if Main.Level != 10:
+		if Main.Level != 9:
 			Main.Level += 1
 			get_tree().change_scene_to_file('res://Scenes/Level' + str(Main.Level) + '.tscn')
 		else:
@@ -48,5 +49,5 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func respawn():
-	global_position.x = 20
-	global_position.y = 820
+	global_position.x = startX
+	global_position.y = startY
