@@ -18,6 +18,8 @@ func _ready():
 		type = 'normal'
 	elif sprite.texture == load('res://Images/Enemies/Skeleton/heart_skeleton_left.png'):
 		type = 'heart'
+	global_position.x = startX
+	global_position.y = startY 
 
 func _physics_process(delta):
 	
