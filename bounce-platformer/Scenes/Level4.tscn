@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://cxjp74ocb7k7g"]
 
-[ext_resource type="Texture2D" uid="uid://cslkiayq5es5t" path="res://Images/Backgrounds/Background3.png" id="1_iv3jq"]
+[ext_resource type="Texture2D" uid="uid://cx0fxykayt3ny" path="res://Images/Backgrounds/(1)Background2.png" id="1_8f1kp"]
 [ext_resource type="Texture2D" uid="uid://cnyl13n5u5t40" path="res://Images/GUI/shield.png" id="2_8f1kp"]
 [ext_resource type="Script" uid="uid://08tbuywv8knb" path="res://Scripts/Player.gd" id="2_edi5u"]
 [ext_resource type="Script" uid="uid://cq56qcegmdeca" path="res://Scripts/Block.gd" id="3_7tujh"]
@@ -159,10 +159,14 @@ height = 76.0
 
 [node name="Level4" type="Node2D" unique_id=28839527]
 
+[node name="Background" type="Sprite2D" parent="." unique_id=961027003]
+position = Vector2(512.75, 515.26666)
+scale = Vector2(4.0333333, 4.0333333)
+texture = ExtResource("1_8f1kp")
+
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1081971171]
 position = Vector2(510.75, 510.5)
 scale = Vector2(4.0333333, 4.0195313)
-texture = ExtResource("1_iv3jq")
 
 [node name="Shield" type="AnimatedSprite2D" parent="." unique_id=145126484]
 position = Vector2(980, 53)

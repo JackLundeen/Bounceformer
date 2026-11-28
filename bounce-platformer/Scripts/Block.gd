@@ -12,6 +12,7 @@ func _physics_process(delta: float) -> void:
 			Main.blocking = true
 			await get_tree().create_timer(0.5).timeout
 			Main.blocking = false
+	print(Main.Live)
 			
 func _on_animation_finished() -> void:
 	Main.block = true

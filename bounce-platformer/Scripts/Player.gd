@@ -3,7 +3,7 @@ extends CharacterBody2D
 var startX = global_position.x
 var startY = global_position.y
 const SPEED = 200.0
-const JUMP_VELOCITY = -350
+const JUMP_VELOCITY = -400
 
 @onready var bullet = preload('res://Scenes/bullet.tscn')
 @onready var lives = $'../Lives'

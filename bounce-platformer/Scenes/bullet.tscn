@@ -12,10 +12,9 @@ collision_mask = 7
 script = ExtResource("1_oduel")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1438553911]
-position = Vector2(2.8000002, 1.75)
+position = Vector2(-2.3841858e-07, -3.5762787e-07)
 scale = Vector2(1.7, 1.7)
 texture = ExtResource("2_oduel")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=430421857]
-position = Vector2(2, 1.75)
 shape = SubResource("RectangleShape2D_g4v7s")

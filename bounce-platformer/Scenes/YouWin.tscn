@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bjn84my0gyurs"]
 
-[ext_resource type="Texture2D" uid="uid://bhw4oybppccdx" path="res://Images/Backgrounds/Background5.png" id="1_wpycq"]
+[ext_resource type="Texture2D" uid="uid://h815y8mkvec8" path="res://Images/Backgrounds/(1)Background3.png" id="1_wpycq"]
 [ext_resource type="Texture2D" uid="uid://hw7sgqgmny2i" path="res://Images/GUI/GameWon.png" id="2_3pahf"]
 [ext_resource type="Texture2D" uid="uid://d1dyssfryal6o" path="res://Images/GUI/Play Again Button/play_again_button.png" id="3_75fnr"]
 [ext_resource type="Texture2D" uid="uid://b6ldtsi51jv31" path="res://Images/GUI/Play Again Button/play_again_button_pressed.png" id="4_mk7mp"]

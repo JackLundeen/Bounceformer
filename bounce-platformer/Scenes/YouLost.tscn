@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://btdab2u550l1v"]
 
-[ext_resource type="Texture2D" uid="uid://bhw4oybppccdx" path="res://Images/Backgrounds/Background5.png" id="1_tcyly"]
+[ext_resource type="Texture2D" uid="uid://h815y8mkvec8" path="res://Images/Backgrounds/(1)Background3.png" id="1_tcyly"]
 [ext_resource type="Texture2D" uid="uid://db0320vs7cett" path="res://Images/GUI/Gameover.png" id="2_iwqgb"]
 [ext_resource type="Texture2D" uid="uid://fp0qkaqp2fgo" path="res://Images/GUI/Retry Button/retry_button.png" id="3_ixhko"]
 [ext_resource type="Texture2D" uid="uid://d2a2o7qtfshux" path="res://Images/GUI/Retry Button/retry_button_pressed.png" id="4_ijyaq"]

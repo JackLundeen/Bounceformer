@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dte8m8u8abg25"]
 
 [ext_resource type="Texture2D" uid="uid://bi0skdcmkxg6a" path="res://Images/GUI/Play Button/play_button.png" id="1_6pedr"]
-[ext_resource type="Texture2D" uid="uid://tbfgoojm61n6" path="res://Images/Backgrounds/Background2.png" id="1_syfuq"]
+[ext_resource type="Texture2D" uid="uid://dl0881btkk8d6" path="res://Images/Backgrounds/(1)Boss room.png" id="1_s2c3o"]
 [ext_resource type="Script" uid="uid://d0qkpcucxeb5u" path="res://Scripts/Play_button_pressed.gd" id="1_uubjt"]
 [ext_resource type="Script" uid="uid://dvdqffpq16bx6" path="res://Scripts/SettingsButton.gd" id="4_s2c3o"]
 
@@ -16,7 +16,7 @@ grow_vertical = 2
 [node name="Background" type="Sprite2D" parent="." unique_id=1619564816]
 position = Vector2(511.7798, 511.55606)
 scale = Vector2(4.0174136, 4.019094)
-texture = ExtResource("1_syfuq")
+texture = ExtResource("1_s2c3o")
 
 [node name="TextureButton" type="TextureButton" parent="." unique_id=1590347015]
 layout_mode = 0

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://tbfgoojm61n6"
-path="res://.godot/imported/Background2.png-525df770e462e599bfd9ccbd34bbfee2.ctex"
+uid="uid://d6ybnb8my0j8"
+path="res://.godot/imported/(2)Boss room.png-bee4eff5a92676d14db5c25a8c3753ec.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/Backgrounds/Background2.png"
-dest_files=["res://.godot/imported/Background2.png-525df770e462e599bfd9ccbd34bbfee2.ctex"]
+source_file="res://Images/Backgrounds/(2)Boss room.png"
+dest_files=["res://.godot/imported/(2)Boss room.png-bee4eff5a92676d14db5c25a8c3753ec.ctex"]
 
 [params]
 
